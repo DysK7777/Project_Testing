@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccessControlTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0d57da33deaa874f4cfa7dc144b0bc022b76f15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f65e498aaea7e332e95bad9ce47b2b6555088d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccessControlTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccessControlTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

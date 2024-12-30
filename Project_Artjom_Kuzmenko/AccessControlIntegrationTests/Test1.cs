@@ -1,5 +1,4 @@
 ﻿using AccessControlTests;
-using Moq;
 using Project_Artjom_Kuzmenko;
 
 namespace AccessControlIntegrationTests
@@ -7,64 +6,59 @@ namespace AccessControlIntegrationTests
     [TestClass]
     public sealed class Test1
     {
-        private AccessInfoProvider accessInfoProvider;
-        private Mock<IDateTimeProvider> mockTimeProvider;
+        private IAccessInfoProvider accessInfoProvider;
+        private IDateTimeProvider dateTimeProvider;
         private AccessControl accessControl;
 
-        // Setup code die wordt uitgevoerd voor elke test
         [TestInitialize]
         public void TestInitialize()
         {
-            // Initialiseer de mock objecten en de AccessControl instantie
-            accessInfoProvider = new AccessInfoProvider();
-            mockTimeProvider = new Mock<IDateTimeProvider>();
+            accessInfoProvider = new AccessInfoProviderAPI();
+            dateTimeProvider = new DateTimeProvider();
+            accessControl = new AccessControl(accessInfoProvider, dateTimeProvider);
         }
 
         [TestMethod]
         public void GrantAccess_ActiveUserWithinWorkingHours_ReturnsTrue()
         {
-            // Arrange: Stel de tijd in en maak de AccessControl instantie
-            mockTimeProvider.Setup(p => p.Now).Returns(new DateTime(2024, 1, 1, 10, 0, 0)); // Binnen werktijd
-            accessControl = new AccessControl(accessInfoProvider, mockTimeProvider.Object);
 
-            // Act
-            var result = accessControl.GrantAccess("12345");
-
-            // Assert
-            Assert.IsTrue(result);
+            accessInfoProvider.Url = "http://localhost:3000/data/acces?id=12345&name=%22test%22&active=true&exist=true";
+            dateTimeProvider.Now = new DateTime(2025, 1, 1, 17, 0, 0);
+            var acces = accessControl.GrantAccess("12345");
+            Assert.IsTrue(acces);
         }
 
         [TestMethod]
         public void GrantAccess_InactiveUser_ThrowsUnauthorizedAccessException()
         {
-            // Arrange: Stel de tijd in en maak de AccessControl instantie
-            mockTimeProvider.Setup(p => p.Now).Returns(new DateTime(2024, 1, 1, 10, 0, 0)); // Binnen werktijd
-            accessControl = new AccessControl(accessInfoProvider, mockTimeProvider.Object);
-
-            // Act & Assert
-            Assert.ThrowsException<UnauthorizedAccessException>(() => accessControl.GrantAccess("67890")); // Inactieve gebruiker
+            accessInfoProvider.Url = "http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=true";
+            dateTimeProvider.Now = new DateTime(2025, 1, 1, 17, 0, 0);
+            Assert.ThrowsException<UnauthorizedAccessException>(() =>
+            {
+                accessControl.GrantAccess("12345");
+            });
         }
 
         [TestMethod]
         public void GrantAccess_UnknownAccessCard_ThrowsArgumentException()
         {
-            // Arrange: Stel de tijd in en maak de AccessControl instantie
-            mockTimeProvider.Setup(p => p.Now).Returns(new DateTime(2024, 1, 1, 10, 0, 0)); // Binnen werktijd
-            accessControl = new AccessControl(accessInfoProvider, mockTimeProvider.Object);
-
-            // Act & Assert
-            Assert.ThrowsException<ArgumentException>(() => accessControl.GrantAccess("99999")); // Onbekende toegangspas
+            accessInfoProvider.Url = "http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=false";
+            dateTimeProvider.Now = new DateTime(2025, 1, 1, 17, 0, 0);
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                accessControl.GrantAccess("12345");
+            });
         }
 
         [TestMethod]
         public void GrantAccess_AccessOutsideWorkingHours_ThrowsUnauthorizedAccessException()
         {
-            // Arrange: Stel de tijd in en maak de AccessControl instantie
-            mockTimeProvider.Setup(p => p.Now).Returns(new DateTime(2024, 1, 1, 20, 0, 0)); // Buiten werktijd
-            accessControl = new AccessControl(accessInfoProvider, mockTimeProvider.Object);
-
-            // Act & Assert
-            Assert.ThrowsException<UnauthorizedAccessException>(() => accessControl.GrantAccess("12345")); // Actieve gebruiker, maar buiten werktijden
+            accessInfoProvider.Url = "http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=true";
+            dateTimeProvider.Now = new DateTime(2025, 1, 1, 20, 0, 0);
+            Assert.ThrowsException<UnauthorizedAccessException>(() =>
+            {
+                accessControl.GrantAccess("12345");
+            });
         }
     }
 }

@@ -2,6 +2,7 @@
 {
     public interface IAccessInfoProvider
     {
+        public string Url { get; set; }
         UserInfo GetUserInfo(string accessCardId);
     }
 }

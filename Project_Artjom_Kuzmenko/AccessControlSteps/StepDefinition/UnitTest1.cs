@@ -3,7 +3,7 @@ using Moq;
 using Project_Artjom_Kuzmenko;
 using Xunit.Gherkin.Quick;
 
-namespace AccessControlSteps
+namespace AccessControlSteps.StepDefinition
 {
     [FeatureFile("./Features/AccessControl.feature")]
     public class UnitTest1 : Feature
@@ -87,4 +87,4 @@ namespace AccessControlSteps
             Assert.False(_accessGranted);
         }
     }
-    }
+}

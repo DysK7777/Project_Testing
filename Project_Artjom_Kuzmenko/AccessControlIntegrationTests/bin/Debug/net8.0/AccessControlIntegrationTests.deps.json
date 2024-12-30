@@ -656,6 +656,7 @@
       "System.Reflection.Metadata/1.6.0": {},
       "Project_Artjom_Kuzmenko/1.0.0": {
         "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
