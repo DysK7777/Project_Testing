@@ -33,47 +33,43 @@ Act: We proberen toegang te verlenen aan de gebruiker met ID 12345 buiten de wer
 Assert: We verwachten een UnauthorizedAccessException, omdat de gebruiker buiten de werktijden probeert in te loggen.
 
 ## Integratie Test
-### Test Setup (TestInitialize)
-De TestInitialize methode wordt uitgevoerd voor elke test en zorgt ervoor dat de objecten en mocks correct worden geïnitialiseerd voordat de tests beginnen. In dit geval wordt een mock van IDateTimeProvider en een nieuwe instantie van AccessInfoProvider aangemaakt voor elke test.
-
 ### Test: GrantAccess_ActiveUserWithinWorkingHours_ReturnsTrue
+Deze test controleert of een actieve gebruiker toegang krijgt binnen de werktijden.
 
-Deze test controleert of een actieve gebruiker toegang krijgt tot het gebouw binnen werktijd (bijvoorbeeld van 9:00 tot 17:00).
-De mock van IDateTimeProvider wordt ingesteld om de huidige tijd te simuleren als 2024-01-01 10:00 uur, wat binnen werktijden valt.
-
-### Test: GrantAccess_InactiveUser_ThrowsUnauthorizedAccessException
-
-Deze test controleert of een inactieve gebruiker geen toegang krijgt, zelfs als het binnen werktijd is.
-De mock van IDateTimeProvider is weer ingesteld op de tijd binnen werktijd (2024-01-01 10:00 uur), maar de gebruiker ID ("67890") is inactief.
-
-### Test: GrantAccess_UnknownAccessCard_ThrowsArgumentException
-
-Deze test controleert wat er gebeurt als een onbekende toegangspas wordt gebruikt om toegang te krijgen.
-De mock IDateTimeProvider is ingesteld op de tijd binnen werktijd (2024-01-01 10:00 uur), maar de toegangspas ID ("99999") is onbekend.
-
-### Test: GrantAccess_AccessOutsideWorkingHours_ThrowsUnauthorizedAccessException
-
-Deze test verifieert dat een actieve gebruiker geen toegang krijgt als de toegang buiten werktijd wordt geprobeerd (bijvoorbeeld na 17:00).
-De mock van IDateTimeProvider is ingesteld op de tijd 2024-01-01 20:00 uur, wat buiten werktijd valt.
-
-## AcceptieTesten Gherkin
-### Given: "the user "(.*)" is active"
-Deze stap configureert de mock IAccessInfoProvider zodat het systeem een actieve gebruiker met het opgegeven toegangspas ID kan herkennen.
-
-### Given: "the user "(.*)" is inactive"
-Deze stap configureert de mock IAccessInfoProvider zodat het systeem een inactieve gebruiker met het opgegeven toegangspas ID kan herkennen.
-
-### Given: "the user "(.*)" is unknown"
-Deze stap configureert de mock IAccessInfoProvider zodat het systeem een onbekende gebruiker met het opgegeven toegangspas ID niet kan herkennen.
-
-### Given: "the current time is (.*)"
-Deze stap configureert de mock IDateTimeProvider zodat het systeem de huidige tijd kan simuleren. De tijd wordt ingesteld op de opgegeven tijd.
-
+Arrange:
+De URL http://localhost:3000/data/acces?id=12345&name=%22test%22&active=true&exist=true geeft aan dat de gebruiker met ID "12345" actief is en bestaat.
+De huidige tijd is ingesteld op  17:00 uur, wat binnen de werktijden valt.
+Act: De GrantAccess-methode wordt aangeroepen met de toegangspas "12345".
+Assert: De test controleert of de methode true retourneert, wat betekent dat de gebruiker toegang krijgt.
 ### When: "the user attempts to access the building"
 Deze stap simuleert het scenario waarin de gebruiker probeert toegang te krijgen tot het gebouw.
 
-### Then: "access should be granted"
-Deze stap controleert of de toegang daadwerkelijk is verleend aan de gebruiker.
+### Test: GrantAccess_InactiveUser_ThrowsUnauthorizedAccessException
+Deze test controleert of een inactieve gebruiker geen toegang krijgt en een UnauthorizedAccessException gooit.
 
-### Then: "access should be denied"
-Deze stap controleert of de toegang geweigerd is aan de gebruiker.
+Arrange:
+De URL http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=true geeft aan dat de gebruiker met ID "12345" inactief is, maar wel bestaat.
+De huidige tijd is ingesteld op 17:00 uur, wat binnen de werktijden valt.
+Act & Assert:
+De test probeert toegang te verlenen aan de gebruiker "12345".
+Omdat de gebruiker inactief is, wordt een UnauthorizedAccessException gegooid.
+
+### Test: GrantAccess_UnknownAccessCard_ThrowsArgumentException
+Deze test controleert of een onbekende toegangspas een ArgumentException veroorzaakt.
+
+Arrange:
+De URL http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=false geeft aan dat de gebruiker met ID "12345" niet bestaat (parameter exist=false).
+De huidige tijd is ingesteld op  17:00 uur, wat binnen de werktijden valt.
+Act & Assert:
+De test probeert toegang te verlenen aan de gebruiker "12345".
+Omdat de gebruiker niet bestaat, wordt een ArgumentException gegooid.
+
+### Test: GrantAccess_AccessOutsideWorkingHours_ThrowsUnauthorizedAccessException
+Deze test controleert of een gebruiker geen toegang krijgt buiten de werktijden, zelfs als de gebruiker bestaat.
+
+Arrange:
+De URL http://localhost:3000/data/acces?id=12345&name=%22test%22&active=false&exist=true geeft aan dat de gebruiker met ID "12345" inactief is, maar wel bestaat.
+De huidige tijd is ingesteld op 20:00 uur, wat buiten de werktijden valt.
+Act & Assert:
+De test probeert toegang te verlenen aan de gebruiker "12345".
+Omdat het buiten de werktijden is, wordt een UnauthorizedAccessException gegooid.
