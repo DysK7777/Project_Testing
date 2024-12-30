@@ -1,0 +1,6 @@
+@Project_Artjom_Kuzmenko_HostAddress = http://localhost:5018
+
+GET {{Project_Artjom_Kuzmenko_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
