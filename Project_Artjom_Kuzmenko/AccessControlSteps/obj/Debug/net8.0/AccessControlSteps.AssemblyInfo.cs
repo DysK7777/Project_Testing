@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccessControlSteps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f65e498aaea7e332e95bad9ce47b2b6555088d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da9f170c7685d6bf202ecfbc29382fb4ebfe2cbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccessControlSteps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccessControlSteps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

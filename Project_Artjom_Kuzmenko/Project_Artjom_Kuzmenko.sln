@@ -5,11 +5,11 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Artjom_Kuzmenko", "Project_Artjom_Kuzmenko\Project_Artjom_Kuzmenko.csproj", "{2A50B4B8-B594-4C27-9014-BD0BA74B9D0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessControlTestsTDD", "AccessControlTests\AccessControlTestsTDD.csproj", "{D6ED9414-16C6-410A-8FDB-B784EFD944D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD", "AccessControlTests\TDD.csproj", "{D6ED9414-16C6-410A-8FDB-B784EFD944D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessControlIntegrationTests", "AccessControlIntegrationTests\AccessControlIntegrationTests.csproj", "{17A6FD59-B916-4512-9614-2EC0D38E7E60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTesting", "AccessControlIntegrationTests\IntegrationTesting.csproj", "{17A6FD59-B916-4512-9614-2EC0D38E7E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessControlSteps", "AccessControlSteps\AccessControlSteps.csproj", "{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTesting", "AccessControlSteps\AcceptanceTesting.csproj", "{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

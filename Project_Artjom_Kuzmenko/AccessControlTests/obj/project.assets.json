@@ -2332,9 +2332,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\AccessControlTestsTDD.csproj",
-      "projectName": "AccessControlTestsTDD",
-      "projectPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\AccessControlTestsTDD.csproj",
+      "projectUniqueName": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\TDD.csproj",
+      "projectName": "TDD",
+      "projectPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\TDD.csproj",
       "packagesPath": "C:\\Users\\artjo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\obj\\",
       "projectStyle": "PackageReference",

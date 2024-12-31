@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oU0yQ4/20H8=",
+  "dgSpecHash": "Bdp1YQ5obJo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\AccessControlTestsTDD.csproj",
+  "projectFilePath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlTests\\TDD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\artjo\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\artjo\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",

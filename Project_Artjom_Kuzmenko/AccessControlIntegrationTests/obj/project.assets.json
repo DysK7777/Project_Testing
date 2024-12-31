@@ -2332,9 +2332,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\AccessControlIntegrationTests.csproj",
-      "projectName": "AccessControlIntegrationTests",
-      "projectPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\AccessControlIntegrationTests.csproj",
+      "projectUniqueName": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\IntegrationTesting.csproj",
+      "projectName": "IntegrationTesting",
+      "projectPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\IntegrationTesting.csproj",
       "packagesPath": "C:\\Users\\artjo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing&Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
