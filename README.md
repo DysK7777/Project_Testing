@@ -73,3 +73,7 @@ De huidige tijd is ingesteld op 20:00 uur, wat buiten de werktijden valt.
 Act & Assert:
 De test probeert toegang te verlenen aan de gebruiker "12345".
 Omdat het buiten de werktijden is, wordt een UnauthorizedAccessException gegooid.
+
+## Acceptie testen
+
+### Check de file: AccessControl.feature
