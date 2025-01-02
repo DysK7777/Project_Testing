@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntegrationTesting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da9f170c7685d6bf202ecfbc29382fb4ebfe2cbc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af30f3fb6e02c46c7060c255fe3ba82059fbc244")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntegrationTesting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntegrationTesting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

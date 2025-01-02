@@ -4,7 +4,7 @@ using Project_Artjom_Kuzmenko;
 namespace AccessControlIntegrationTests
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class IntegrationTest
     {
         private IAccessInfoProvider accessInfoProvider;
         private IDateTimeProvider dateTimeProvider;

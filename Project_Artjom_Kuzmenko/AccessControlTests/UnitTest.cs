@@ -4,7 +4,7 @@ using Project_Artjom_Kuzmenko;
 namespace AccessControlTests
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class UnitTest
     {
         [TestMethod]
         public void GrantAccess_ActiveUserWithinWorkingHours_ReturnsTrue()

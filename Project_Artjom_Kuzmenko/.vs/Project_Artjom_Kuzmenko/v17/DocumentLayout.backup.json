@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AccessControlSteps.csproj|c:\\users\\artjo\\documents\\jaar3\\testing\u0026security\\project_testing\\project_artjom_kuzmenko\\accesscontrolsteps\\stepdefinition\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AccessControlSteps.csproj|solutionrelative:accesscontrolsteps\\stepdefinition\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AcceptanceTesting.csproj|c:\\users\\artjo\\documents\\jaar3\\testing\u0026security\\project_testing\\project_artjom_kuzmenko\\accesscontrolsteps\\features\\accesscontrol.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AcceptanceTesting.csproj|solutionrelative:accesscontrolsteps\\features\\accesscontrol.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A6FD59-B916-4512-9614-2EC0D38E7E60}|AccessControlIntegrationTests\\AccessControlIntegrationTests.csproj|c:\\users\\artjo\\documents\\jaar3\\testing\u0026security\\project_testing\\project_artjom_kuzmenko\\accesscontrolintegrationtests\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A6FD59-B916-4512-9614-2EC0D38E7E60}|AccessControlIntegrationTests\\AccessControlIntegrationTests.csproj|solutionrelative:accesscontrolintegrationtests\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A50B4B8-B594-4C27-9014-BD0BA74B9D0F}|Project_Artjom_Kuzmenko\\Project_Artjom_Kuzmenko.csproj|c:\\users\\artjo\\documents\\jaar3\\testing\u0026security\\project_testing\\project_artjom_kuzmenko\\project_artjom_kuzmenko\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A50B4B8-B594-4C27-9014-BD0BA74B9D0F}|Project_Artjom_Kuzmenko\\Project_Artjom_Kuzmenko.csproj|solutionrelative:project_artjom_kuzmenko\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AcceptanceTesting.csproj|c:\\users\\artjo\\documents\\jaar3\\testing\u0026security\\project_testing\\project_artjom_kuzmenko\\accesscontrolsteps\\stepdefinition\\accesscontrolstepdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{418B8475-D1A3-4F70-BE7E-2FEDA4E7969D}|AccessControlSteps\\AcceptanceTesting.csproj|solutionrelative:accesscontrolsteps\\stepdefinition\\accesscontrolstepdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,47 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccessControl.feature",
+              "DocumentMoniker": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\Features\\AccessControl.feature",
+              "RelativeDocumentMoniker": "AccessControlSteps\\Features\\AccessControl.feature",
+              "ToolTip": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\Features\\AccessControl.feature",
+              "RelativeToolTip": "AccessControlSteps\\Features\\AccessControl.feature",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPtSURBVDhPdZTLb1RVHMc/59x75965M3Q6M31RYaBprVAgGDFUEQiIgroBV0JcmLjwsZIYXbnWP8CNe6NREiWEkJBAIo9EUwpINaANIW3pAzptmemUuXfmPo8LZvpK/K5Ozvn9Pud7zu\u002BXn\u002BD/9FU2yc7ERqAAdAAxMItiirt\u002BkW/K9fUpKKXEmo23gS9kiuHMfjr0Y9hydwNmNiLqKB5Ti\u002B8wEV7gu8ptFuLaaoS2vHrFlByze\u002Bg1j6OZH6DLAwLxghRyo0LlQeQ0obUJIbqUQYGs7KNV\u002BuxIlLBklelwHfBNu4s99hEqxococTCl27mBln6jJ71FVAOXjXYnu1sHhKWZiQWvlEOKXgpGmj7jMUtxkRHfWwG2ScFL5kEKxingiERqXVYHJwsnONy5j0l3hsH8Ht4rHEcpuFX\u002BC0ACW4EKs\u002BE0E\u002BEjHIUE4NOMzaB1CDgskKJFTxOoEEtLssUusCszwL62l9mgpwnVs6c1ZABH2W/t57MMADoAphhAFz2WtNLPb\u002BgRn2/7hBl3lofONL/P3\u002BBhbYYJd5JYKcaqD5uwZkE3gehDkAeePHMIvUB7RKQFKkAg6E52Ug4qDJfvMFad4GZphKEnt5lyZ5rAppIoOojZROMfAHKAHcQh816J4YU/KdbnqYYO1dDBCV3K/iJB7NNm5uhL99CWyKOJ5ZqmgLbVQAAEAhAEKmQxqOAEDrGKkQgkkqzZymvtezm15V0OtA9ia8lmqmx\u002BXxM4Bzi2nmRHpp/T/R/xRudBtqYLZPQMGaOFvJnFEhabk92803WE0/0fkzOzTWANKLPcNq8nJTltj1Jqey3yRLE\u002Bx7W5ITbbz3Go/VUSusne/IscaB/kaehw4dElhksj3K2M4sd\u002BCGqIcnyW32rOM4fXapOMB/\u002BEKpye8xY4P3OJ4dIdbD3JQGs/hjRIaSl2ZbYjkVyZ\u002B4PLs1dxQhdgmrHgAddqpRWHY6FHQbfoNfIK1VOP60ZCGqI72YUbu1yfG6ISLJHWU4y7k9yt/Es9ritQIair3PQv8qtzn1W9BO\u002BnWzhqv4UhvkSwA0hY0hKalMIJXQSShJYgVhFBHKjG9Cnix19zqfYLP1bnVxwCTIYBTjzLLvNeo0lbIxXZQRw2CqeIVUSkIhqwCvAtZ6oXuVybwVNqLdBTisWoTjleYJs5jsaDRuUMoH05DjzgPr76gTPVs9yoj1OK/ebhChDAUYpi6KGLKcaDCSRLZLUssBNwgSlgiCfRea7XznLZfUBJeasRa4E07v/bV4z4VTr0OtsS6cZUGQV1hXL8M7f8c3z/9BEe0fr0tRN7vU5uyHAitRnoBkYRUZFzrsdPzvrIZf0HlF2bQabSBKQAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-01-01T23:16:12.767Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserInfo.cs",
-              "DocumentMoniker": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\Project_Artjom_Kuzmenko\\UserInfo.cs",
-              "RelativeDocumentMoniker": "Project_Artjom_Kuzmenko\\UserInfo.cs",
-              "ToolTip": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\Project_Artjom_Kuzmenko\\UserInfo.cs",
-              "RelativeToolTip": "Project_Artjom_Kuzmenko\\UserInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T12:18:29.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Test1.cs",
-              "DocumentMoniker": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\Test1.cs",
-              "RelativeDocumentMoniker": "AccessControlIntegrationTests\\Test1.cs",
-              "ToolTip": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlIntegrationTests\\Test1.cs",
-              "RelativeToolTip": "AccessControlIntegrationTests\\Test1.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T21:24:45.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\StepDefinition\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "AccessControlSteps\\StepDefinition\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\StepDefinition\\UnitTest1.cs",
-              "RelativeToolTip": "AccessControlSteps\\StepDefinition\\UnitTest1.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwB4AAAAlAAAAAAAAAA==",
+              "Title": "AccessControlStepDefinition.cs",
+              "DocumentMoniker": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\StepDefinition\\AccessControlStepDefinition.cs",
+              "RelativeDocumentMoniker": "AccessControlSteps\\StepDefinition\\AccessControlStepDefinition.cs",
+              "ToolTip": "C:\\Users\\artjo\\Documents\\Jaar3\\Testing\u0026Security\\Project_Testing\\Project_Artjom_Kuzmenko\\AccessControlSteps\\StepDefinition\\AccessControlStepDefinition.cs",
+              "RelativeToolTip": "AccessControlSteps\\StepDefinition\\AccessControlStepDefinition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-30T15:29:39.961Z",
               "EditorCaption": ""

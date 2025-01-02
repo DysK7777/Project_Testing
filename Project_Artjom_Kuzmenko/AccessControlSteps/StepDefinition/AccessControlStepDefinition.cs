@@ -1,12 +1,11 @@
 using AccessControlTests;
-using Moq;
 using Project_Artjom_Kuzmenko;
 using Xunit.Gherkin.Quick;
 
-namespace AccessControlSteps.StepDefinition
+namespace AcceptanceTesting.StepDefinition
 {
     [FeatureFile("./Features/AccessControl.feature")]
-    public sealed class UnitTest1 : Feature
+    public sealed class AccessControlStepDefinition : Feature
     {
         private const string mockoonUsers = "http://localhost:3000/data/acces";
 
@@ -19,7 +18,7 @@ namespace AccessControlSteps.StepDefinition
         private bool _active;
         public bool _exist;
 
-        public UnitTest1()
+        public AccessControlStepDefinition()
         {
             _dateTimeProvider = new DateTimeProvider();
             _infoProvider = new AccessInfoProvider();
@@ -27,7 +26,7 @@ namespace AccessControlSteps.StepDefinition
             _name = string.Empty;
         }
 
-        [Given("the user \"(.*)\" is active")]
+        [Given(@"the user (.*) is active")]
         public void GivenUserIsActive(string accessCardId)
         {
             _accessCardId = int.Parse(accessCardId);
@@ -37,7 +36,14 @@ namespace AccessControlSteps.StepDefinition
             _infoProvider.Url = $"{mockoonUsers}/?id={_accessCardId}&name=%22{_name}%22&active={_active}&exist={_exist}";
         }
 
-        [Given("the user \"(.*)\" is inactive")]
+        [And(@"the current time is (.*)")]
+        public void AndTheCurrentTimeIs(string time)
+        {
+            var currentTime = DateTime.Parse(time);
+            _dateTimeProvider.Now = currentTime;
+        }
+
+        [Given(@"the user (.*) is inactive")]
         public void GivenUserIsInactive(string accessCardId)
         {
             _accessCardId = int.Parse(accessCardId);
@@ -47,7 +53,14 @@ namespace AccessControlSteps.StepDefinition
             _infoProvider.Url = $"{mockoonUsers}/?id={_accessCardId}&name=%22{_name}%22&active={_active}&exist={_exist}";
         }
 
-        [Given("the user \"(.*)\" is unknown")]
+        [And(@"the current time is (.*)")]
+        public void AndTheCurrentTimeIsAgain(string time)
+        {
+            var currentTime = DateTime.Parse(time);
+            _dateTimeProvider.Now = currentTime;
+        }
+
+        [Given(@"the user (.*) is unknown")]
         public void GivenUserIsUnknown(string accessCardId)
         {
             _accessCardId = null;
@@ -57,14 +70,14 @@ namespace AccessControlSteps.StepDefinition
             _infoProvider.Url = $"{mockoonUsers}/?id={_accessCardId}&name=%22{_name}%22&active={_active}&exist={_exist}";
         }
 
-        [Given("the current time is (.*)")]
-        public void GivenTheCurrentTimeIs(string time)
+        [And(@"the current time is (.*)")]
+        public void AndTheCurrentTimeIsForUnknown(string time)
         {
             var currentTime = DateTime.Parse(time);
             _dateTimeProvider.Now = currentTime;
         }
 
-        [When("the user attempts to access the building")]
+        [When(@"the user attempts to access the building")]
         public void WhenUserAttemptsToAccessBuilding()
         {
             try
@@ -81,13 +94,13 @@ namespace AccessControlSteps.StepDefinition
             }
         }
 
-        [Then("access should be granted")]
+        [Then(@"access should be granted")]
         public void ThenAccessShouldBeGranted()
         {
             Assert.True(_accessGranted);
         }
 
-        [Then("access should be denied")]
+        [Then(@"access should be denied")]
         public void ThenAccessShouldBeDenied()
         {
             Assert.False(_accessGranted);
